@@ -1,68 +1,50 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Make-a-form
 
-## Available Scripts
+_To run this example implementaiton run `npm install` followed by `npm start`_
 
-In the project directory, you can run:
+_Further information about this example can be found in commented code_
 
-### `npm start`
+## Instructions
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Make an app with the following components:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+-   Form
+-   Post result
 
-### `npm test`
+### Form
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A form with three fields, `Name`, `Age` and `Address`.
 
-### `npm run build`
+Each field should be validated by the following rules:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+`Name`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+-   Should be longer than 3 characters
+-   Must not be empty
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`Age`
 
-### `npm run eject`
+-   Must be 18 or above
+-   Must not be empty
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+`Address`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   Should look like an street address (f e Somestreet 123)
+-   Must not be empty
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Each field should present all errors related to the above rules.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Errors should only be shown once the user has attempted to submit
 
-## Learn More
+The form must be valid in order for the user to be able to submit.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Post result
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The result of the post (some JSON-like representation of the post data) should be displayed by a separate component.
 
-### Code Splitting
+The `Post result`-component must be a separate component from `Form`-component and must not be a child of the `Form`-component.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+**Bonus points**
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+-   Use your own validation.
+-   Keep it DRY.
